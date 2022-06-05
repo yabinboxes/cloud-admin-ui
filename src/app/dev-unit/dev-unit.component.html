@@ -1,0 +1,152 @@
+<div class="flex justify-center items-center top-0 left-0 w-screen m-0 mt-10">
+  <div class="container">
+
+    <!--<mat-accordion>
+      <mat-expansion-panel hideToggle>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            This is the expansion title
+          </mat-panel-title>
+          <mat-panel-description>
+            This is a summary of the content
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <p>This is the primary content of the panel.</p>
+      </mat-expansion-panel>
+    </mat-accordion>-->
+
+    <div class="text-gray-900 font-bold text-xl mb-2">Last Created Resources</div>
+    <mat-accordion>
+      <mat-expansion-panel *ngFor="let unit of deployedList" hideToggle>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            {{unit.url}}
+          </mat-panel-title>
+          <mat-panel-description>
+            {{unit.date}}
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <p>This is the primary content of the panel.</p>
+      </mat-expansion-panel>
+    </mat-accordion>
+
+    
+
+  </div>
+</div>
+
+<!--
+<div class="mt-20 flex flex-wrap justify-center">
+  <div class="container">
+    <mat-grid-list cols="2">
+      <mat-grid-tile>
+        <div>
+          <h2>Deploy dev unit</h2>
+          <mat-vertical-stepper [linear]="isLinear" #stepper>
+            <mat-step [stepControl]="firstFormGroup">
+              <form [formGroup]="firstFormGroup">
+                <ng-template matStepLabel
+                  >Fill out source code location</ng-template
+                >
+                <section>
+                  <br />
+                  <label class="code-location-margin">Code location:</label>
+                  <mat-radio-group
+                    [(ngModel)]="codeLocation"
+                    [ngModelOptions]="{ standalone: true }"
+                  >
+                    <mat-radio-button value="github">Github</mat-radio-button>
+                    <mat-radio-button value="local">Local</mat-radio-button>
+                  </mat-radio-group>
+                </section>
+                <br />
+                <section *ngIf="codeLocation === 'github'">
+                  <p>
+                    <mat-form-field appearance="fill">
+                      <mat-label>github</mat-label>
+                      <input matInput placeholder="Placeholder" />
+                    </mat-form-field>
+                  </p>
+                </section>
+                <section *ngIf="codeLocation === 'local'">
+                  <p>
+                    <input
+                      type="file"
+                      id="ctrl"
+                      webkitdirectory
+                      directory
+                      multiple
+                    />
+                  </p>
+                </section>
+                <div>
+                  <button mat-button matStepperNext>Next</button>
+                </div>
+              </form>
+            </mat-step>
+            <mat-step [stepControl]="secondFormGroup">
+              <form [formGroup]="secondFormGroup">
+                <ng-template matStepLabel>Check pipeline options</ng-template>
+                <section class="devops-section" [formGroup]="pipelineOptions">
+                  <p>
+                    <mat-checkbox formControlName="security"
+                      >security</mat-checkbox
+                    >
+                  </p>
+                  <p>
+                    <mat-checkbox formControlName="unittest"
+                      >unit test</mat-checkbox
+                    >
+                  </p>
+                  <p>
+                    <mat-checkbox formControlName="sonar">sonar</mat-checkbox>
+                  </p>
+                  <p>
+                    <mat-checkbox formControlName="performancce"
+                      >performancce</mat-checkbox
+                    >
+                  </p>
+                </section>
+                <div>
+                  <button mat-button matStepperPrevious>Back</button>
+                  <button mat-button matStepperNext>Next</button>
+                </div>
+              </form>
+            </mat-step>
+            <mat-step>
+              <ng-template matStepLabel>Deploy</ng-template>
+              <div>
+                <h2>Properties</h2>
+                <h3>{{ codeLocation }}</h3>
+                <section class="example-section" [formGroup]="pipelineOptions">
+                  <h4>You chose:</h4>
+                  {{ pipelineOptions.value | json }}
+                </section>
+                <mat-card>{{ deployedUnit.url }}</mat-card>
+              </div>
+              <div>
+                <button mat-button matStepperPrevious>Back</button>
+                <button color="primary" (click)="deployApp()" mat-raised-button>
+                  Deploy
+                </button>
+                
+              </div>
+            </mat-step>
+          </mat-vertical-stepper>
+        </div>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <div>
+          <mat-list>
+            <div mat-subheader>Last Deployments</div>
+            <mat-list-item *ngFor="let unit of deployedList">
+              <mat-icon mat-list-icon>http</mat-icon>
+              <div mat-line>{{ unit.url }}</div>
+              <div mat-line>{{ unit.date }}</div>
+            </mat-list-item>
+          </mat-list>
+        </div>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+</div>-->

@@ -1,0 +1,21 @@
+<div class="flex justify-center items-center top-0 left-0 w-screen m-0 mt-10">
+    <div class="container">
+       
+        <mat-list>
+            <div class="text-gray-900 font-bold text-xl mb-2">Base Images</div>
+            <mat-list-item *ngFor="let image of baseImages">
+                <mat-icon mat-list-icon>code</mat-icon>
+                <div mat-line>{{image.name}}</div>
+                <div mat-line> {{image.cloudType}} </div>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <div class="text-gray-900 font-bold text-xl mb-2">Images</div>
+            <mat-list-item *ngFor="let image of images">
+                <mat-icon mat-list-icon>code</mat-icon>
+                <div mat-line>{{image.name}}</div>
+                <div mat-line> {{image.cloudType}} </div>
+            </mat-list-item>
+        </mat-list>
+        
+    </div>
+</div>

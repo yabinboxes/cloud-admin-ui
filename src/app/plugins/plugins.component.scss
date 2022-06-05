@@ -1,0 +1,137 @@
+.mat-figure {
+    min-width: 300px !important;
+}
+
+.mat-selection-list {
+    min-width: 300px !important;
+}
+
+example-viewer .docs-example-viewer-source code-snippet {
+    border-bottom: 1px solid rgba(0,0,0,.12);
+}
+
+code-snippet[_ngcontent-bqe-c110] {
+    padding: 20px;
+}
+
+[_nghost-bqe-c106] {
+    display: block;
+    padding: 20px 0;
+}
+example-viewer code-snippet {
+    background: rgba(0,0,0,.01);
+}
+.mat-tab-group {
+    font-family: Roboto,Helvetica Neue,sans-serif;
+}
+
+app-component-viewer {
+    font-weight: 400;
+    width: calc(100% - 341px);
+    padding: 20px 50px;
+}
+guide-viewer, app-component-viewer {
+    color: #000000de;
+}
+
+.text-code {
+    font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
+    font-size: 12px;
+    color: var(--color-fg-default);
+    word-wrap: normal;
+    white-space: pre;
+}
+
+// ------------
+/*
+.tab-size[data-tab-size="8"] {
+    -moz-tab-size: 8;
+    tab-size: 8;
+}
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+    display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    text-indent: initial;
+    border-spacing: 2px;
+    border-color: grey;
+}
+
+.blob-code-inner {
+    overflow: visible;
+    font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
+    font-size: 12px;
+    color: var(--color-fg-default);
+    word-wrap: normal;
+    white-space: pre;
+}
+.blob-code {
+    position: relative;
+    padding-right: 10px;
+    padding-left: 10px;
+    line-height: 20px;
+    vertical-align: top;
+}
+td, th {
+    padding: 0;
+}
+* {
+    box-sizing: border-box;
+}
+
+td {
+    display: table-cell;
+    vertical-align: inherit;
+}
+.tab-size[data-tab-size="8"] {
+    -moz-tab-size: 8;
+    tab-size: 8;
+}
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+pre {
+    font-size: 14px;
+}
+
+code, pre {
+    font-family: Roboto Mono,monospace;
+}
+
+pre {
+    font-family: monospace;
+    white-space: pre;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+.tab-size[data-tab-size="8"] {
+    -moz-tab-size: 8;
+    tab-size: 8;
+}
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+table {
+    border-collapse: separate;
+    text-indent: initial;
+    border-spacing: 2px;
+}
+style attribute {
+    word-wrap: break-word;
+}*/

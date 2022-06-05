@@ -1,0 +1,98 @@
+<div class="flex justify-center items-start top-0 left-0 w-screen m-0 mt-10  min-h-fit">
+    <div class="container">
+
+        <div class="grid grid-cols-3 gap-2 min-w-fit">
+
+            <div class="col-span-1 border-r-4 min-h-fit">
+
+                <!-- new ORG -->
+                <section class="example-button-row m-3">
+                    <form [formGroup]="FormInputs" (ngSubmit)="addOrg(FormInputs)">
+                        <div class="text-gray-900 font-bold text-xl mb-2">ORGs (L1)</div>
+                        <input type="text" class="
+        form-control
+        block
+        w-full
+        px-3
+        py-1.5
+        text-base
+        font-normal
+        text-gray-700
+        bg-white bg-clip-padding
+        border border-solid border-gray-300
+        rounded
+        transition
+        ease-in-out
+        m-0
+        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
+      " id="exampleFormControlInput1" placeholder="Org name" formControlName="orgName" />
+                        <div class="w-full text-right m-0">
+                            <button type="submit" mat-raised-button color="primary" style="margin-right: 0px;">Add
+                                new org</button>
+                        </div>
+                        <mat-divider></mat-divider>
+                    </form>
+
+                    <!-- list ORGs -->
+
+                    <mat-selection-list #org [multiple]="false">
+                        <mat-list-option *ngFor="let org of orgList; let i = index" [value]="org.name" (click)="selectOrg(i)">
+                            <mat-icon mat-list-icon (click)="removeOrg(i)">delete</mat-icon>
+                            {{org.name}}
+                        </mat-list-option>
+                    </mat-selection-list>
+                </section>
+
+            </div>
+            <div class="col-span-1 border-r-4">
+               
+                <!-- new PROJECT -->
+                <section class="example-button-row m-3">
+                    <form [formGroup]="FormInputs" (ngSubmit)="addProject(FormInputs)">
+                        <div class="text-gray-900 font-bold text-xl mb-2">PROJECTs (L2)</div>
+                        <input type="text" class="
+        form-control
+        block
+        w-full
+        px-3
+        py-1.5
+        text-base
+        font-normal
+        text-gray-700
+        bg-white bg-clip-padding
+        border border-solid border-gray-300
+        rounded
+        transition
+        ease-in-out
+        m-0
+        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
+      " id="exampleFormControlInput1" placeholder="Project name" formControlName="projectName" />
+                        <div class="w-full text-right m-0">
+                            <button type="submit" mat-raised-button color="primary" style="margin-right: 0px;">Add
+                                new project</button>
+                        </div>
+                        <mat-divider></mat-divider>
+                    </form>
+
+                    <!-- list PROJECTs -->
+
+                    <mat-selection-list #prj [multiple]="false">
+                        <mat-list-option *ngFor="let prj of prjList; let i = index" [value]="prj.name" (click)="selectPrj(i)">
+                            <mat-icon mat-list-icon (click)="removeProject(i)">delete</mat-icon>
+                            {{prj.name}}
+                        </mat-list-option>
+                    </mat-selection-list>
+                </section>
+            </div>
+            <div class="col-span-1">
+                <div class="text-gray-900 font-bold text-xl mb-2">RESOURCEs (L3)</div>
+                <br/>
+                <br/>
+                <label>repo details</label>
+                <br/>
+                <label>repo name</label>
+            </div>
+        </div>
+
+    </div>
+</div>

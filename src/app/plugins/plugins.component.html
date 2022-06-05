@@ -1,0 +1,117 @@
+<div class="flex justify-center items-center top-0 left-0 w-screen m-0 mt-10">
+    <div class="container">
+        <div class="grid grid-cols-3 gap-0">
+            <div class="col-span-1 border-r border-b border-l border-t border-gray-400 bg-white rounded-b">
+                <div class="max-w-sm w-full lg:max-w-full lg:flex grid grid-flow-row auto-rows-max"
+                    *ngFor="let item of plugins; let i = index">
+                    <div
+                        class="w-[5rem] h-auto flex bg-cover rounded-t rounded-l text-center items-center overflow-hidden">
+                        <fa-icon [icon]="faPlayCircle" class="w-24 h-24 fa-3x"></fa-icon>
+                    </div>
+                    <div class="w-full rounded-b-none rounded-r p-4 pl-0 flex flex-row justify-between leading-normal">
+                        <div class="mb-8">
+                            <div class="text-gray-900 font-bold text-xl mb-2">{{item.name}}</div>
+                            <p class="text-gray-700 text-base">{{item.description}}</p>
+                            <p class="text-sm text-gray-600 flex items-center">
+                                Github
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-span-2">
+                <div
+                    class="w-full max-w-full flex h-[62rem] border-r border-b border-t border-gray-400 bg-white rounded-b-none rounded-r leading-normal">
+                    <div class="w-full p-4 pt-1 leading-normal">
+                        <div class="w-full text-right items-end">
+                            <fa-icon [icon]="faCopy" class="w-24 h-24 fa-lg"></fa-icon>
+                        </div>
+                        <div class="mb-8 mt-3 text-code">
+                            <!--<div class="text-gray-900 font-bold text-xl mb-2">Can coffee make you a better developer?
+                            </div>-->
+                            <div class="text-gray-700 text-base">
+
+                                <!-- table -->
+
+
+                                <table style="white-space: pre;">
+                                    <tr>
+                                        <td>name: Lint, Test & Build</td>
+                                    </tr>
+                                    <tr>
+                                        <td>on: [push]</td>
+                                    </tr>
+                                    <tr>
+                                        <td>jobs:</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code class="undefined spaces">&nbsp;&nbsp;</code>builds:</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code>runs-on:
+                                            ubuntu-latest</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code>strategy:</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>matrix:</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>node-version: [14.x]</td>
+                                    </tr>
+                                </table>
+
+                                <!-- end table -->
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+<!--<div class="mt-20 flex flex-wrap">
+    <div class="container">
+        <mat-grid-list cols="3">
+            <mat-grid-tile [colspan]="1">
+                <mat-selection-list #shoes [multiple]="false">
+                    <mat-list-option *ngFor="let plugin of plugins" [value]="plugin">
+                        {{plugin.name}}
+                    </mat-list-option>
+                </mat-selection-list>
+            </mat-grid-tile>
+            <mat-grid-tile [colspan]="2">
+                <div class="flex justify-center">
+                    <div class="block rounded-lg shadow-lg bg-white max-w-sm text-center">
+                        <div class="py-3 px-6 border-b border-gray-300">
+                            Featured
+                        </div>
+                        <div class="p-6">
+                            <h5 class="text-gray-900 text-xl font-medium mb-2">Special title treatment</h5>
+                            <p class="text-gray-700 text-base mb-4">
+                                <code>
+                                    a = 6;
+                                    b = 9;
+                                    c = "this is the best program";
+                                </code>
+                            </p>
+                            <button type="button"
+                                class=" inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Button</button>
+                        </div>
+                        <div class="py-3 px-6 border-t border-gray-300 text-gray-600">
+                            2 days ago
+                        </div>
+                    </div>
+                </div>
+
+            </mat-grid-tile>
+        </mat-grid-list>
+    </div>
+</div>-->

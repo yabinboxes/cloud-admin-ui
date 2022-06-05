@@ -1,0 +1,31 @@
+<div class="flex justify-center items-center top-0 left-0 w-screen m-0 bg-gray-900 text-white">
+  <div class="container flex flex-row bg-gray-900 text-white shadow-lg bg-primary text-secondary">
+    <div class="sidebar-icon group" (click)="changeView('image-registry')">
+      <fa-icon [icon]="faCubes"></fa-icon>
+      <span class="sidebar-tooltip scale-100">Image Registry</span>
+    </div>
+    <div class="sidebar-icon group" (click)="changeView('dev-unit')">
+      <fa-icon [icon]="faLaptopCode"></fa-icon>
+      <span class="sidebar-tooltip scale-100">Dev Unit</span>
+    </div>
+    <div class="sidebar-icon group" (click)="changeView('prod-unit')">
+      <fa-icon [icon]="faRocket"></fa-icon>
+      <span class="sidebar-tooltip scale-100">Mark for Prod</span>
+    </div>
+    <div class="sidebar-icon group" (click)="changeView('plugins')">
+      <fa-icon [icon]="faRobot"></fa-icon>
+      <span class="sidebar-tooltip scale-100">Plugin</span>
+    </div>
+    <div class="sidebar-icon group" (click)="changeView('inventory')">
+      <fa-icon [icon]="faThList"></fa-icon>
+      <span class="sidebar-tooltip scale-100">Inventory</span>
+    </div>
+  </div>
+</div>
+
+
+<app-image-registry *ngIf="showView==='image-registry'"></app-image-registry>
+<app-dev-unit *ngIf="showView==='dev-unit'"></app-dev-unit>
+<app-prod-unit *ngIf="showView==='prod-unit'"></app-prod-unit>
+<app-plugins *ngIf="showView==='plugins'"></app-plugins>
+<app-inventory *ngIf="showView==='inventory'"></app-inventory>
